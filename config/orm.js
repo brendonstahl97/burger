@@ -30,10 +30,10 @@ const orm = {
         })
     },
 
-    updateOne: (tableInput, value, burgerName,  cb) => {
-        const query = `UPDATE ${tableInput} SET devoured = ${value} WHERE burger_name = ?`;
+    updateOne: (tableInput, value, id,  cb) => {
+        const query = `UPDATE ${tableInput} SET devoured = ${value} WHERE id = ?`;
 
-        connection.query(query, [burgerName], (err, res) => {
+        connection.query(query, [id], (err, res) => {
             if (err) throw err;
 
             cb(res);
