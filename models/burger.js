@@ -18,7 +18,7 @@ class Burger {
     }
 
     updateOne(value, id, cb) {
-        orm.updateOne('burgers', value, burgerName, res => {
+        orm.updateOne('burgers', value, id, res => {
             cb(res);
         })
     }

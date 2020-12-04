@@ -1,6 +1,6 @@
 const express = require("express");
 
-const router = express.router();
+const router = express.Router();
 
 const Burger = require("../models/Burger.js");
 const burger = new Burger();
@@ -13,7 +13,7 @@ router.get("/", (req, res) => {
 
         console.log(dataObj);
 
-        //render here
+        res.render("index", dataObj);
     })
 })
 
@@ -25,7 +25,7 @@ router.post("/api/burgers", (req, res) => {
 
 router.put('/api/burgers/:id', (req, res) => {
 
-    burger.updateOne(true, id, result => {
+    burger.updateOne(true, req.params.id, result => {
         if (result.changedRows == 0) {
             return res.status(404).end();
           } else {
@@ -33,3 +33,5 @@ router.put('/api/burgers/:id', (req, res) => {
           }
     })
 })
+
+module.exports = router;

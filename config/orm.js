@@ -22,7 +22,7 @@ const orm = {
     },
 
     insertOne: (tableInput, cols, values, cb) => {
-        const query = `INSERT INTO ${tableInput} (${cols.toString()} VALUES (${printQuestionMarks(values.length)});`
+        const query = `INSERT INTO ${tableInput} (${cols.toString()}) VALUES (${printQuestionMarks(values.length)});`
         connection.query(query, values, (err, res) => {
             if (err) throw err;
 
