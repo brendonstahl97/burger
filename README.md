@@ -2,6 +2,8 @@
 # Eat The Burger! [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ***
    
+![burger example photo](./burgerpics.png)
+
 ### Table of Contents
 * [Description](#Description)
 * [Installation](#Installation)
