@@ -1,8 +1,9 @@
 const express = require("express");
+const path = require('path');
 
 const router = express.Router();
 
-const Burger = require("../models/Burger.js");
+const Burger = require(path.join(__dirname, "../models/Burger.js"));
 const burger = new Burger();
 
 router.get("/", (req, res) => {
